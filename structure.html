@@ -21,20 +21,21 @@
 <div class="container-fluid full">
 	<div class="header-image"></div>
 	<div class="">
-		<div style="position:absolute; top:0; left:5px; width:30px; height:30px; text-align:center">
-			<button id="navButton" style="float:none" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</button>
-		</div>
 		<div style="text-align:center; padding-top:5px">
 			<a href="<?php echo site_url(); ?>">
 				<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			</a>
 		</div>
-			<div class="navbar center" id="mainNav">
+			<div class="navbar navbar-default" id="mainNav">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="#">Brand</a>
+				</div>
 				<div class="navbar-inner">
 					
 					<div class="container-fluid">
