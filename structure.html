@@ -12,6 +12,9 @@
 <!-- End Bootstrap-->
 <link rel="stylesheet" href=<?php echo get_template_directory_uri() . "/nav-justified.css";?> >
 <link rel="stylesheet" href= <?php echo  get_stylesheet_uri();?> >
+
+<link href='https://fonts.googleapis.com/css?family=Arvo|Poiret+One' rel='stylesheet' type='text/css'>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title(); ?> - <?php bloginfo('name'); ?></title>
 <!-- Yet to come -->
@@ -21,11 +24,6 @@
 <div class="container-fluid full">
 	<div class="header-image"></div>
 	<div class="">
-		<div style="text-align:center; padding-top:5px">
-			<a href="<?php echo site_url(); ?>">
-				<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-			</a>
-		</div>
 			<div class="navbar navbar-default" id="mainNav">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,7 +32,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				  </button>
-				  <a class="navbar-brand" href="#">Brand</a>
+				  <a class="navbar-brand" href="#">Home</a>
 				</div>
 				<div class="navbar-inner">
 					
@@ -56,7 +54,22 @@
 					
 				</div>
 			</div>
-		
+		<div class="logo-container">
+			<a href="<?php echo site_url(); ?>">
+				
+				<!--<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />-->
+				<div class="container-fluid">
+				<div class="row">
+				
+					<div class="col-md-4 title-text-container">
+						<h1 class="title">Fachschaftsrat Physik</h1>
+						<h2 class="subtitle">an der Universität Göttingen</h2>
+					</div>
+					
+				</div>
+				</div>
+			</a>
+		</div>
 	</div>
 	<div class="main">
 	<div class="row"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
@@ -163,18 +176,7 @@
 
 <div class="footer-image"></div>
 </body>
-<script type="text/javascript">
-$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function () {
-  $('#mainNav').css("display","block");
-});
-$('#bs-example-navbar-collapse-1').on('hidden.bs.collapse', function () {
-  $('#mainNav').css("display","none");
-});
-$(window).resize( function() {
-	if($('#navButton').css("display")=="none") $('#mainNav').css("display","block");
-});
 
-</script>
 <!--<h4 >Seht her!</h4>
 			<img src="https://noerdcampus.de/wordpress/FB-f-Logo__blue_50.png"/>
 			

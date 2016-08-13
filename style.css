@@ -22,9 +22,20 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
+  font-family: 'Arvo', serif;
+}
+@media (min-width:768px) {
+	.header-image {
+		background-position:center top;
+		background-size: 100%;
+	}
 }
 
-
+@media (min-width:768px) {
+	.title-text-container {
+		padding-bottom:50px;
+	}
+}
 @media (max-width: 564px) {
 	.main {
 		margin-bottom:80px;
@@ -67,7 +78,7 @@ body {
 	width:100%;
 	text-align:center;
 	position:absolute;
-	bottom:10px;
+	bottom:-40px;
 	padding:10px; /*align with main*/
 }
 .footer-content {
@@ -92,28 +103,47 @@ body {
 
 .header-image{
 	position:absolute;
-	top:0;
+	top:50px;
 	z-index:-1;
-	background:url(header650.png);
+	opacity:0.7;
+	background:url(header-hell.png);
 	background-repeat:no-repeat;
-	background-position:center top;
-	background-size: 100%;
+	background-position:left top;
+	background-size: 150%;
 	width:100%;
 	height:100%;
+}
+.logo-container {
+	position:relative;
+	top:-25px;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 .footer-image {
 	height:100%;
 	width:100%;
 	position:absolute;
-	bottom:0;
+	bottom:-50px;
 	z-index:-1;
-	background-image:url(footer650.png);
+	background-image:url(footer-hell.png);
 	background-repeat:no-repeat;
 	background-position:center bottom;
 	background-size: 100%;
 }
+/* .navbar { //Schmalere Navbar
+	min-height:40px;
+}
+.navbar-brand {
+	height:40px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.nav>li>a {
+	padding-top:10px;
+	padding-bottom:10px;
+} */
 .navbar ul {
-	font-size: 14pt;
+	font-size: 12pt;
 }
 .navbar a {
 
@@ -148,6 +178,7 @@ body {
 }
 
 /* Bootstrap hover */
+
 @media(min-width:768px) {
 .dropdown-menu .sub-menu {
     left: 100%;
@@ -193,7 +224,7 @@ body {
 }
 .dropdown-menu>li>a {
 	white-space:normal;
-	}
+}
 .transparent {
 	background-color:rgba(0, 0, 0, 0);
 }
@@ -208,3 +239,19 @@ body {
 .metainfo-container {
 	margin-bottom: 15px;
 }
+.title {
+	font-size:20pt;
+	color:black;
+	font-weight:bold;
+}
+.subtitle {
+	color:black;
+	font-size:16pt;
+}
+.title-text-container {
+	font-family: 'Poiret One', cursive
+}
+.title-text-container a {
+	text-decoration:none;
+}
+
