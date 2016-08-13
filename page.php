@@ -11,53 +11,70 @@
 
 <!-- End Bootstrap-->
 <link rel="stylesheet" href=<?php echo get_template_directory_uri() . "/nav-justified.css";?> >
+
+<link href='https://fonts.googleapis.com/css?family=Arvo|Poiret+One' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href= <?php echo  get_stylesheet_uri();?> >
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title(); ?> - <?php bloginfo('name'); ?></title>
 <!-- Yet to come -->
 </head>
-<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', 'rgb(57, 64, 72);') . "\">"; ?>
+
+	<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', 'rgb(57, 64, 72);') . "\">"; ?>
 <!-- background-colors: 1.: rgb(57, 64, 72); 2.: rgb(217, 235, 255) ; 3.: rgb(209, 236, 214); 4.: rgb(157, 195, 164) 5.: rgb(186, 247, 197); 6.: rgb(205, 245, 212); 7.: rgb(192, 203, 230)-->
 <div class="container-fluid full">
-	<div class="header-image"></div>
-	<div class="">
-			<div class="navbar navbar-default" id="mainNav">
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-				  <a class="navbar-brand" href="#">FSR</a>
-				</div>
-				<div class="navbar-inner">
-					
-					<div class="container-fluid">
-					<?php
-						wp_nav_menu( array(
-							'menu'              => 'primary',
-							'theme_location'    => 'primary',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
-							'container_id'      => 'bs-example-navbar-collapse-1',
-							'menu_class'        => 'nav navbar-nav',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker())
-						);
-					?>
-					</div>
-					
-				</div>
+	<div class="head1">
+		<div class="navbar navbar-default" id="mainNav">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="<?php echo site_url(); ?>">Home</a>
 			</div>
-		<div class="logo-container">
-			<a href="<?php echo site_url(); ?>">
-				<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-			</a>
+			<div class="navbar-inner">
+				
+				<div class="container-fluid">
+				<?php
+					wp_nav_menu( array(
+						'menu'              => 'primary',
+						'theme_location'    => 'primary',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => 'bs-example-navbar-collapse-1',
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+					);
+				?>
+				</div>
+				
+			</div>
 		</div>
-		</div>
+	<div class="logo-container">
+		<a href="<?php echo site_url(); ?>">
+			
+			<!--<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />-->
+			<div class="container-fluid">
+			<div class="row">
+			
+				<div class="col-md-4 title-text-container">
+					<h1 class="title">Fachschaftsrat Physik</h1>
+					<h2 class="subtitle">an der Universität Göttingen</h2>
+				</div>
+				
+			</div>
+			</div>
+		</a>
+	</div>
+	</div>
 	<div class="main">
+	<div class="header-image-container">
+		<img class="header-image" src=<?php echo get_template_directory_uri() . "/header-hell.png";?>> 
+	</div>
 	<div class="row"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
 		 
 		<div class="col-md-2" >
