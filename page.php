@@ -25,7 +25,7 @@
 <div class="container-fluid full">
 	<div class="head1">
 		<div class="navbar navbar-default" id="mainNav">
-			<div class="navbar-header">
+			<div class="navbar-header narrowdesign">
 			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
@@ -60,8 +60,8 @@
 			<!--<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />-->
 			<div class="container-fluid">
 			<div class="row">
-			
-				<div class="col-md-4 title-text-container">
+				<div class="col-md-1"></div>
+				<div class="col-md-3 title-text-container">
 					<h1 class="title">Fachschaftsrat Physik</h1>
 					<h2 class="subtitle">an der Universität Göttingen</h2>
 				</div>
@@ -76,16 +76,9 @@
 		<img class="header-image" src=<?php echo get_template_directory_uri() . "/header-hell.png";?>> 
 	</div>
 	<div class="row"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
-		 
-		<div class="col-md-2" >
-			<div class="widget" style="text-align:center">
-				<?php if ( is_active_sidebar( 'page_left_1' ) ) : ?>
-					<?php dynamic_sidebar( 'page_left_1' ); ?>
-				<?php endif; ?>
-			</div>
-		</div>
-		 
-		<div class="col-md-8">
+		
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
 			<div class="content">
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -102,7 +95,12 @@
 			</div>
 		</div>
 		
-		<div class="col-md-2" >
+		<div class="col-md-3" >
+			<div class="widget" style="text-align:center">
+				<?php if ( is_active_sidebar( 'page_left_1' ) ) : ?>
+					<?php dynamic_sidebar( 'page_left_1' ); ?>
+				<?php endif; ?>
+			</div>
 			<div class="widget transparent" style="text-align:center">
 				<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
 					<?php dynamic_sidebar( 'home_right_1' ); ?>

@@ -1,6 +1,6 @@
 <?php
 //Widget1_content
-/*
+
 echo "<div class='visible-md-block visible-lg-block'>";
 for($i=1; $i<4; $i++) { //Bis zu drei Bilder anzeigen. ToDo: Anzahl variabel machen.
 	if(! empty($instance["img_".$i]) ) {
@@ -14,9 +14,9 @@ for($i=1; $i<4; $i++) { //Bis zu drei Bilder anzeigen. ToDo: Anzahl variabel mac
 	}
 }
 echo "</div>";
-*/
 
-echo "<div class='row'>";
+
+echo "<div class='visible-sm-block visible-xs-block row'>";
 for($i=1; $i<4; $i++) { //Bis zu drei Bilder anzeigen. ToDo: Anzahl variabel machen.
 	if(! empty($instance["img_".$i]) ) {
 		echo "
