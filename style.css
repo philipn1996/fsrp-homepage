@@ -22,7 +22,7 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
-  font-family: 'Arvo', serif;
+  font-family: 'Open Sans';
 }
 
 @media (min-width:768px) {

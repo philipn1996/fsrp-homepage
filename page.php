@@ -12,7 +12,7 @@
 <!-- End Bootstrap-->
 <link rel="stylesheet" href=<?php echo get_template_directory_uri() . "/nav-justified.css";?> >
 
-<link href='https://fonts.googleapis.com/css?family=Arvo|Poiret+One' rel='stylesheet' type='text/css'>
+<link href=<?php echo get_template_directory_uri() . "/fonts.css";?> rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href= <?php echo  get_stylesheet_uri();?> >
 <meta name="viewport" content="width=device-width, initial-scale=1">
