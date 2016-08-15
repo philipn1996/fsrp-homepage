@@ -51,6 +51,15 @@
 					<h2 class="subtitle">an der Universität Göttingen</h2>
 				</div>
 				
+				<div class="col-md-4"></div>
+				
+				<div class="col-md-4">
+					<div class="widget transparent" style="text-align:center">
+						<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
+							<?php dynamic_sidebar( 'home_right_1' ); ?>
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 			</div>
 		</a>
@@ -62,7 +71,7 @@
 	</div>
 	<div class="row"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
 		 
-		<div class="col-md-2" >
+		<div class="col-md-4" >
 			<div class="widget">
 			<?php if ( is_active_sidebar( 'home_left_1' ) ) : ?>
 					<?php dynamic_sidebar( 'home_left_1' ); ?>
@@ -125,13 +134,7 @@
 			</div>
 		</div>
 		
-		<div class="col-md-2" >
-			<div class="widget transparent" style="text-align:center">
-				<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
-					<?php dynamic_sidebar( 'home_right_1' ); ?>
-				<?php endif; ?>
-			</div>
-		</div>
+		
     
 	</div>
 
