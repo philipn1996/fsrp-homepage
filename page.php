@@ -101,7 +101,7 @@
 					<?php dynamic_sidebar( 'page_left_1' ); ?>
 				<?php endif; ?>
 			</div>
-			<div class="widget transparent" style="text-align:center">
+			<div class="widget transparent hasOlderBrother" style="text-align:center">
 				<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
 					<?php dynamic_sidebar( 'home_right_1' ); ?>
 				<?php endif; ?>
