@@ -6,8 +6,8 @@ Author: Philip Schaten, Benedikt Grüger
 Author URI: noerdcampus.de
 */
 
-/*768 px = @grid-float-breakpoint*/
-
+/*1030 px == @grid-float-breakpoint*/
+/*992 px == @screen-md*/
 html {
   height: 100%;
   box-sizing: border-box;
@@ -25,13 +25,23 @@ body {
   font-family: 'Open Sans';
 }
 
-@media (min-width:768px) {
+@media (min-width:1068px) {
 	.title-text-container {
 		padding-bottom:60px;
 	}
+}
+@media (min-width:992px) { /*aligning Brand and content*/
 	.narrowdesign {
 		margin-left:9.3%;
 	}
+	.EWContainer {
+		text-align:right;
+	}
+}
+@media (max-width:991px) {
+	.EWContainer {
+	text-align:center;
+}
 }
 
 
@@ -282,4 +292,8 @@ body {
 #mainNav {
 	margin-bottom:0;
 }
-
+.Eigenwerbung {
+	margin-top:0.7em;
+	font-size:8pt;
+	margin-bottom:0;
+}

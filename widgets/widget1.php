@@ -15,7 +15,7 @@ class Widget1 extends WP_Widget {
 	function admin_setup(){ //Skripte nachladen
 
 		wp_enqueue_media();
-		wp_register_script('widget1-admin-js', get_template_directory_uri().'/widget1-admin.js', array( 'jquery', 'media-upload', 'media-views' ), 0 );
+		wp_register_script('widget1-admin-js', get_template_directory_uri().'/widgets/widget1-admin.js', array( 'jquery', 'media-upload', 'media-views' ), 0 );
 		wp_enqueue_script('widget1-admin-js');
 		//wp_enqueue_style('widget1-admin', plugins_url('widget1-admin.css', __FILE__) );
 

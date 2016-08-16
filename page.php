@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <!-- Bootstrap-->
-<script   src="https://noerdcampus.de/wordpress/srv/jquery-2.2.4.min.js"></script>
+<script src=<?php echo get_template_directory_uri() . "/js/jquery-3.1.0.min.js";?>></script>
+
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://noerdcampus.de/wordpress/srv/bootstrap.min.css">
+<link href=<?php echo get_template_directory_uri() . "/css/bootstrap.min.css";?> rel='stylesheet' type='text/css'>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://noerdcampus.de/wordpress/srv/bootstrap.min.js"></script>
+<script src=<?php echo get_template_directory_uri() . "/js/bootstrap.min.js";?>></script>
 
 <!-- End Bootstrap-->
-<link rel="stylesheet" href=<?php echo get_template_directory_uri() . "/nav-justified.css";?> >
-
-<link href=<?php echo get_template_directory_uri() . "/fonts.css";?> rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href= <?php echo  get_stylesheet_uri();?> >
+
+<link href=<?php echo get_template_directory_uri() . "/css/fonts.css";?> rel='stylesheet' type='text/css'>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title(); ?> - <?php bloginfo('name'); ?></title>
 <!-- Yet to come -->
@@ -120,37 +122,31 @@
 			<div class="col-md-8">
 				<div class="footer-content">
 					<div class="row">
-					<div class="col-xs-4">
-					<p class="">Hintergrund: CC BY-SA 2.5 Daniel Schwen</p>
-					</div>
-					<div class="col-xs-4">
-					Nördcampus Inc.
-					</div>
-					<div class="col-xs-4">
-					Impressum
-					</div>
+					<?php
+					$struct = "<div class='col-xs-4'>";
+					$pos = ["Linke", "Mittlere", "Rechte"];
+					foreach($pos as $p) {
+						$text = get_theme_mod('footer'.$p, ' ');
+						if(($link = get_theme_mod('foolink'.$p, '0'))!='0') {
+							echo $struct."<a href='".$link."'>".$text."</a></div>";
+						}else{
+							echo $struct."<p>".$text."</p></div>";
+						}
+						echo "\n";
+					}
+					?>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2"></div>
+			<div class="col-md-2 EWContainer">
+				<p class="text-muted Eigenwerbung"><a href="http://wordpress.com">Wordpress</a><br><a href="http://noerdcampus.de">noerdcampus.de</a></p>
+			</div>
 		</div>
 		</div>
 	</footer>
 
 <div class="footer-image"></div>
 </body>
-<script type="text/javascript">
-$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function () {
-  $('#mainNav').css("display","block");
-});
-$('#bs-example-navbar-collapse-1').on('hidden.bs.collapse', function () {
-  $('#mainNav').css("display","none");
-});
-$(window).resize( function() {
-	if($('#navButton').css("display")=="none") $('#mainNav').css("display","block");
-});
-
-</script>
 <!--<h4 >Seht her!</h4>
 			<img src="https://noerdcampus.de/wordpress/FB-f-Logo__blue_50.png"/>
 			

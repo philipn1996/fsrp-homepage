@@ -57,11 +57,11 @@ function arphabet_widgets_init() {
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 //Add Social-Media Widget
-include_once("widget1.php");
+include_once("widgets/widget1.php");
 //Add Meta-Widget
-include_once("widget2.php");
+include_once("widgets/widget2.php");
 //Add Upcoming-Widget
-include_once("widget3.php");
+include_once("widgets/widget3.php");
 //Customizer
 
 function mytheme_customize_register( $wp_customize ) {
@@ -102,6 +102,46 @@ $wp_customize->add_control(
         )
     )
 );
+$wp_customize->add_section( 'footer' , array(
+    'title'      => __( 'Text im Footer', 'MrProper' ),
+    'priority'   => 30,
+) );
+$positions = ["Linke", "Mittlere", "Rechte"];
+foreach($positions as $p) {
+		
+	$wp_customize->add_setting( 'footer'.$p , array(
+		'default'     => ' ',
+		'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'footer'.$p,
+			array(
+				'label' => __( $p.' Spalte', 'footer'.$p ),
+				'section' => 'footer',
+				'settings' => 'footer'.$p,
+				'type'           => 'text',
+			)
+		)
+	);
+	$wp_customize->add_setting( 'foolink'.$p , array(
+		'default'     => '0',
+		'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'foolink'.$p,
+			array(
+				'label' => __( 'Link für '.$p.' Spalte', 'foolink'.$p ),
+				'section' => 'footer',
+				'settings' => 'foolink'.$p,
+				'type'           => 'text',
+			)
+		)
+	);
+}
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
