@@ -61,8 +61,7 @@
 			
 			<!--<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />-->
 			<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-1"></div>
+			<div class="row reduced">
 				<div class="col-md-3 title-text-container">
 					<h1 class="title">Fachschaftsrat Physik</h1>
 					<h2 class="subtitle">an der Universität Göttingen</h2>
@@ -77,10 +76,8 @@
 	<div class="header-image-container">
 		<img class="header-image" src=<?php echo get_template_directory_uri() . "/header-hell.png";?>> 
 	</div>
-	<div class="row"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
-		
-		<div class="col-md-1"></div>
-		<div class="col-md-7">
+	<div class="row reduced"> <!-- Seitenlayout: Aktuelles links, Inhalt mittig, Werbung rechts -->
+		<div class="col-md-8">
 			<div class="content">
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -97,7 +94,7 @@
 			</div>
 		</div>
 		
-		<div class="col-md-3" >
+		<div class="col-md-4" >
 			<div class="widget" style="text-align:center">
 				<?php if ( is_active_sidebar( 'page_left_1' ) ) : ?>
 					<?php dynamic_sidebar( 'page_left_1' ); ?>
@@ -139,7 +136,7 @@
 				</div>
 			</div>
 			<div class="col-md-2 EWContainer">
-				<p class="text-muted Eigenwerbung"><a href="http://wordpress.com">Wordpress</a><br><a href="http://noerdcampus.de">noerdcampus.de</a></p>
+				<p class="text-muted Eigenwerbung"><a href="http://wordpress.com">Wordpress</a><br><a href="http://nördcampus.de">noerdcampus.de</a></p>
 			</div>
 		</div>
 		</div>

@@ -30,18 +30,31 @@ body {
 		padding-bottom:60px;
 	}
 }
+@media (max-width:1067px AND min-width:663px) {
+	.title-text-container {
+		padding-bottom:30px;
+	}
+}
 @media (min-width:992px) { /*aligning Brand and content*/
 	.narrowdesign {
-		margin-left:9.3%;
+		margin-left:3.5%;
 	}
 	.EWContainer {
 		text-align:right;
+	}
+	
+	.reduced {
+		width:95%;
+		margin-left:2.5% !important; /*sorry*/
 	}
 }
 @media (max-width:991px) {
 	.EWContainer {
 	text-align:center;
-}
+	}
+	.narrowdesign {
+		margin-left:15px;
+	}
 }
 
 
@@ -259,6 +272,7 @@ body {
 }
 .dropdown-menu>li>a {
 	white-space:normal;
+	word-wrap:break-word;
 }
 .transparent {
 	background-color:rgba(0, 0, 0, 0);
@@ -296,4 +310,19 @@ body {
 	margin-top:0.7em;
 	font-size:8pt;
 	margin-bottom:0;
+}
+.main img {
+	max-width:100%;
+	height:auto;
+}
+.alignleft {
+	float:left;
+	margin: 0.375em 1.75em 1.75em 0;
+}
+.alignright {
+	float:right;
+	margin: 0.375em 1.75em 1.75em 0;
+}
+.entry {
+	margin-bottom:35px;
 }
