@@ -195,5 +195,21 @@
 <?php echo "<div class='' id='home_right_1' style='text-align:center;'>";?>
 				<?php echo "<div class='widget' style='position:absolute; top:0; left:0; height:100%; width:100%; z-index:-1; background-color:".get_theme_mod('sidebarrcolor', 'white') .";opacity:".get_theme_mod('sidebarropacity', '1') .";text-align:center;'></div>";?>			
 			
--->	
+-->
+<script>
+	if($(window).width()<1030) {
+		$(".nav>li>a").attr("data-toggle", "dropdown");
+		$(".nav>li>a").attr("class", "dropdown-toggle");
+	}
+	$(window).resize( function() {
+		if($(window).width()<1030) {
+			$(".nav>li>a").attr("data-toggle", "dropdown");
+			$(".nav>li>a").attr("class", "dropdown-toggle");
+		}
+		if($(window).width()>=1030) {
+			$(".nav>li>a").removeAttr("data-toggle");
+			$(".nav>li>a").removeClass("dropdown-toggle");
+		}
+	});
+</script>
 </html>

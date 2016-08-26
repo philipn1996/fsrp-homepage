@@ -227,7 +227,7 @@ body {
 
 /* Bootstrap hover */
 
-@media(min-width:768px) {
+@media(min-width:1030px) {
 .dropdown-menu .sub-menu {
     left: 100%;
     position: absolute;
@@ -267,12 +267,11 @@ body {
 }
 }
 .dropdown-menu {
-	width:100%;
 	border-radius:5px;
 }
 .dropdown-menu>li>a {
-	white-space:normal;
-	word-wrap:break-word;
+	/*white-space:normal;
+	word-wrap:break-word;*/
 }
 .transparent {
 	background-color:rgba(0, 0, 0, 0);
