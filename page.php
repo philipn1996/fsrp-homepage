@@ -22,8 +22,7 @@
 <!-- Yet to come -->
 </head>
 
-	<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', 'rgb(57, 64, 72);') . "\">"; ?>
-<!-- background-colors: 1.: rgb(57, 64, 72); 2.: rgb(217, 235, 255) ; 3.: rgb(209, 236, 214); 4.: rgb(157, 195, 164) 5.: rgb(186, 247, 197); 6.: rgb(205, 245, 212); 7.: rgb(192, 203, 230)-->
+	<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', '#E3EDFC') . "\">"; ?>
 <div class="container-fluid full">
 	<div class="head1">
 		<div class="navbar navbar-default" id="mainNav">

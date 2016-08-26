@@ -19,12 +19,9 @@
 <link rel="stylesheet" href= <?php echo  get_stylesheet_uri();?> >
 
 <link href=<?php echo get_template_directory_uri() . "/css/fonts.css";?> rel='stylesheet' type='text/css'>
-<!--<link href='https://fonts.googleapis.com/css?family=Arvo|Poiret+One' rel='stylesheet' type='text/css'>-->
-
 
 </head>
-<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', 'rgb(57, 64, 72);') . "\">"; ?>
-<!-- background-colors: 1.: rgb(57, 64, 72); 2.: rgb(217, 235, 255) ; 3.: rgb(209, 236, 214); 4.: rgb(157, 195, 164) 5.: rgb(186, 247, 197); 6.: rgb(205, 245, 212); 7.: rgb(192, 203, 230)-->
+<?php echo "<body style=\"background-color:". get_theme_mod('bgcolor', '#E3EDFC') . "\">"; ?>
 <div class="container-fluid full">
 	<div class="head1">
 		<div class="navbar navbar-default" id="mainNav">
@@ -84,7 +81,7 @@
 			<div class="row">
 				<div class="col-xs-3 logo-container">
 					<div class="visible-md-block visible-lg-block" style="text-align:left">
-					<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+					<img class="logo" src='<?php echo get_template_directory_uri() . "/cropped-logo_gruen_transpa.png"?>'>
 					</div>
 					<div class="hidden-md hidden-lg" style="text-align:center">
 					<img class="logo" src='<?php echo get_template_directory_uri() . "/cropped-logo_gruen_transpa-90.png"?>'>

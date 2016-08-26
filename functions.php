@@ -29,7 +29,7 @@ add_theme_support( 'custom-header', $defaults );
 function arphabet_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => 'Home right sidebar',
+		'name'          => 'HomeSidebar 2(transparent)',
 		'id'            => 'home_right_1',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
@@ -45,7 +45,7 @@ function arphabet_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => 'Home left sidebar',
+		'name'          => 'HomeSidebar 1',
 		'id'            => 'home_left_1',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
@@ -67,7 +67,7 @@ include_once("widgets/widget3.php");
 function mytheme_customize_register( $wp_customize ) {
 
 $wp_customize->add_setting( 'bgcolor' , array(
-    'default'     => 'rgb(57, 64, 72)',
+    'default'     => '#E3EDFC',
     'transport'   => 'refresh',
 ) );
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bgcolor_control', array(
