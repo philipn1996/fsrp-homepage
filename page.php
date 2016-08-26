@@ -144,6 +144,22 @@
 
 <div class="footer-image"></div>
 </body>
+<script>
+	if($(window).width()<1030) {
+		$(".nav>li>a").attr("data-toggle", "dropdown");
+		$(".nav>li>a").attr("class", "dropdown-toggle");
+	}
+	$(window).resize( function() {
+		if($(window).width()<1030) {
+			$(".nav>li>a").attr("data-toggle", "dropdown");
+			$(".nav>li>a").attr("class", "dropdown-toggle");
+		}
+		if($(window).width()>=1030) {
+			$(".nav>li>a").removeAttr("data-toggle");
+			$(".nav>li>a").removeClass("dropdown-toggle");
+		}
+	});
+</script>
 <!--<h4 >Seht her!</h4>
 			<img src="https://noerdcampus.de/wordpress/FB-f-Logo__blue_50.png"/>
 			

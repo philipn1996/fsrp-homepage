@@ -88,6 +88,12 @@ body {
 		margin-top:10px;
 	}
 }
+
+.logo {
+	margin-top:20px;
+	max-height:200px;
+}
+
 //Sticky Footer
 /*.container {
   width: auto;
@@ -176,7 +182,8 @@ body {
 	
 }
 .logo-container {
-	width:100%;
+	min-height:100%;
+	padding: 0 0 0 0;
 }
 /* .navbar { //Schmalere Navbar
 	min-height:40px;
@@ -218,12 +225,6 @@ body {
 	display:flex;
 	align-items:center;
 }	
-.logo {
-	height:auto;
-	width:35%;
-	max-width:415px;
-	min-width:200px;
-}
 
 /* Bootstrap hover */
 

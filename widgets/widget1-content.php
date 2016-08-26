@@ -16,7 +16,7 @@ for($i=1; $i<4; $i++) { //Bis zu drei Bilder anzeigen. ToDo: Anzahl variabel mac
 echo "</div>";
 
 
-echo "<div class='visible-sm-block visible-xs-block row'>";
+echo "<div class='hidden-md hidden-lg row'>";
 for($i=1; $i<4; $i++) { //Bis zu drei Bilder anzeigen. ToDo: Anzahl variabel machen.
 	if(! empty($instance["img_".$i]) ) {
 		echo "

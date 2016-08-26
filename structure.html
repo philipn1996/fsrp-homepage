@@ -67,7 +67,7 @@
 					<h1 class="title">Fachschaftsrat Physik</h1>
 					<h2 class="subtitle">an der Universität Göttingen</h2>
 				</div>
-				
+				<div class="col-md-6"></div>
 			</div>
 			</div>
 		</a>
@@ -81,6 +81,24 @@
 		<div class="col-md-8">
 			<div class="content">
 		
+			<div class="row">
+				<div class="col-xs-3 logo-container">
+					<div class="visible-md-block visible-lg-block" style="text-align:left">
+					<img class="logo" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+					</div>
+					<div class="hidden-md hidden-lg" style="text-align:center">
+					<img class="logo" src='<?php echo get_template_directory_uri() . "/cropped-logo_gruen_transpa-90.png"?>'>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<?php
+						$post = get_page_by_title("StartseitenStart");
+						$content = apply_filters('the_content', $post->post_content); 
+						echo $content;  
+					?>
+				</div>
+			</div>
+			<hr>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<h2><?php the_title(); ?></h2>
 			<div class="entry">
