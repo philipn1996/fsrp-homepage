@@ -107,10 +107,13 @@ $wp_customize->add_section( 'footer' , array(
     'priority'   => 30,
 ) );
 $positions = ["Linke", "Mittlere", "Rechte"];
+$defaultText = ["fsr@fsr.physik.uni-goettingen.de", "Impressum", "Physik an der Uni"];
+$defaultLinks = ["mailto:fsr@fsr.physik.uni-goettingen.de" , 0, "http://physik.uni-goettingen.de"];
+$i=0;
 foreach($positions as $p) {
 		
 	$wp_customize->add_setting( 'footer'.$p , array(
-		'default'     => ' ',
+		'default'     => $defaultText[$i],
 		'transport'   => 'refresh',
 	) );
 	$wp_customize->add_control(
@@ -125,8 +128,9 @@ foreach($positions as $p) {
 			)
 		)
 	);
+	//0 - wird nicht verlinkt
 	$wp_customize->add_setting( 'foolink'.$p , array(
-		'default'     => '0',
+		'default'     => $defaultLinks[$i],
 		'transport'   => 'refresh',
 	) );
 	$wp_customize->add_control(
