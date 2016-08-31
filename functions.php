@@ -145,6 +145,7 @@ foreach($positions as $p) {
 			)
 		)
 	);
+	$i++;
 }
 
 }

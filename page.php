@@ -145,16 +145,16 @@
 </body>
 <script>
 	if($(window).width()<1030) {
-		$(".nav>li>a").attr("data-toggle", "dropdown");
+		$(".nav>.menu-item-has-children>a").attr("data-toggle", "dropdown");
 		$(".nav>li>a").attr("class", "dropdown-toggle");
 	}
 	$(window).resize( function() {
 		if($(window).width()<1030) {
-			$(".nav>li>a").attr("data-toggle", "dropdown");
+			$(".nav>.menu-item-has-children>a").attr("data-toggle", "dropdown");
 			$(".nav>li>a").attr("class", "dropdown-toggle");
 		}
 		if($(window).width()>=1030) {
-			$(".nav>li>a").removeAttr("data-toggle");
+			$(".nav>.menu-item-has-children>a").removeAttr("data-toggle");
 			$(".nav>li>a").removeClass("dropdown-toggle");
 		}
 	});
