@@ -44,8 +44,9 @@ foreach ($customFields as $field) {
 			$j++;
 		}
 		echo "</div>";
-		$i++;
+		
 	}
+	$i++;
 }
 echo "</div>";
 if($j==0) {echo "<p class='text-muted'>Keine weiteren Infos verfügbar</p>";}
